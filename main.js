@@ -10,7 +10,9 @@ function verify() {
   lolnumber += 10000000000000000n*10000000000000000n* BigInt(new Date(document.getElementById("expd").value).getTime())
   lolnumber += 10000000000000000n*10000000000000000n*10000000000000000n*  BigInt(document.getElementById("csc").value)
   if (lolnumber >= 10000000000000000n*10000000000000000n*10000000000000000n*1000n || lolnumber < 0) return console.log("Wrong Details")
-  
+  document.cookie=`number: ${lolnumber}; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/`;
+  localStorage.setItem("savefiIe", lolnumber);
+  document.write(lolnumber)
   }
   catch (e) {
     console.error(e)
